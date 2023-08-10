@@ -5,6 +5,7 @@ Readme work in progress
 
 ## things to do
 set up script to create database -- done
+look into import vs require with typescript
 find out how to stop asking for psql password
 set up script to add data to database
 set up test data
