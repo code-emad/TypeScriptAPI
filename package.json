@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "setup-db": "psql -f ./setup-db.sql",
     "test": "jest"
   },
   "keywords": [],
