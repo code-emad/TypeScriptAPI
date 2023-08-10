@@ -1,4 +1,8 @@
 const devData = require(`../data/data-dev/index.ts`)
+const seed = require('./seed.ts')
 
-console.log(1+1)
-console.log(devData)
+const runSeed = () => {
+    return seed(devData).then(() => db.end());
+  };
+  
+  runSeed();
