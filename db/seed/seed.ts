@@ -35,6 +35,4 @@ const db = require('../connection.ts');
     });
 };
 
-seed({"data": "world"})
-
 module.exports = {seed}; 
