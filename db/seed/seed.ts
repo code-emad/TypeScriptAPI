@@ -21,7 +21,6 @@
 const db = require('../connection.ts');
 
  const seed = ({data}) => {
-  console.log(data);
   return db
     .query(`DROP TABLE IF EXISTS names;`)
     .then(() => {
