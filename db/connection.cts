@@ -16,6 +16,6 @@ if (!process.env.PGDATABASE && !process.env.DATABASE_URL) {
   throw new Error('PGDATABASE or DATABASE_URL not set');
 }
 
-const db = new Pool(config); // Create a new Pool instance
+export const db = new Pool(config); // Create a new Pool instance
 
-module.exports = db; // Export the db object
+// module.exports = db; // Export the db object
