@@ -16,9 +16,9 @@
 // }
 
 // module.exports = seed;
+//import { query } from 'pg'; // Import specific parts of the 'pg' module if needed
 
 const db = require('../connection.ts');
-//import { query } from 'pg'; // Import specific parts of the 'pg' module if needed
 
  const seed = ({data}) => {
   console.log(data);
@@ -35,4 +35,6 @@ const db = require('../connection.ts');
     });
 };
 
-export default {seed}; // Use 'export default' to export the module
+seed({"data": "world"})
+
+module.exports = {seed}; 
