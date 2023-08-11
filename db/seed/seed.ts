@@ -17,10 +17,10 @@
 
 // module.exports = seed;
 
-import db from '../connection';
-import { query } from 'pg'; // Import specific parts of the 'pg' module if needed
+const db = require('../connection.ts');
+//import { query } from 'pg'; // Import specific parts of the 'pg' module if needed
 
-const seed = ({data}) => {
+ const seed = ({data}) => {
   console.log(data);
   return db
     .query(`DROP TABLE IF EXISTS names;`)
@@ -35,4 +35,4 @@ const seed = ({data}) => {
     });
 };
 
-export default seed; // Use 'export default' to export the module
+export default {seed}; // Use 'export default' to export the module

@@ -1,5 +1,7 @@
 const devData = require(`../data/data-dev/index.ts`)
-import {seed} from './seed.ts'
+const db = require('../connection.ts');
+
+import {seed} from './seed'
 
 
 const runSeed = () => {
