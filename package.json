@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "build": "tsc",
     "setup-db": "psql -f ./db/setup-db.sql",
     "seed": "node ./db/seed/run-seed.ts",
     "test": "jest"
