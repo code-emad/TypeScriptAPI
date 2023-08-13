@@ -1,11 +1,11 @@
-import {db} from '../connection.cjs'
+import { db } from "../connection.cjs";
 
- export const seed = ({data}) => {
+export const seed = ({ data }) => {
   return db
     .query(`DROP TABLE IF EXISTS names;`)
-    
+
     .then(() => {
-      console.log("DROP COMPLETE")
+      console.log("DROP COMPLETE");
       const namesTablePromise = db.query(
         `CREATE TABLE names (
           name_id SERIAL PRIMARY KEY,
@@ -15,9 +15,8 @@ import {db} from '../connection.cjs'
       return Promise.all([namesTablePromise]);
     })
     .then(() => {
-      return db
-      .query(`INSERT INTO names (name) VALUES ('Emad'), ('Emad1'), ('Emad2');`)
-    })
+      return db.query(
+        `INSERT INTO names (name) VALUES ('Emad'), ('Emad1'), ('Emad2');`
+      );
+    });
 };
-
-
