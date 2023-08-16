@@ -7,13 +7,19 @@ var connection_cjs_1 = require("./db/connection.cjs");
 app.use(cors());
 app.use(express.json());
 app.get('/api/names', function (request, response, next) {
-    (function () {
-        var sqlString = 'SELECT * FROM names;';
-        return connection_cjs_1.db.query(sqlString).then(function (names) {
-            console.log(names);
-            response.status(200).send({ "hello": "world" });
-        });
+    var sqlString = 'SELECT * FROM names;';
+    connection_cjs_1.db.query(sqlString)
+        .then(function (names) {
+        console.log(names);
+        response.status(200).send({ hello: "world" });
     });
+    // () => {
+    //     const sqlString = 'SELECT * FROM names;'
+    // return db.query(sqlString).then((names) => {
+    //     console.log(names)
+    //     response.status(200).send({"hello": "world"})
+    // })
+    // }
 });
 // listen file
 //const app = require('./app') will need to be included once moved to separate file
