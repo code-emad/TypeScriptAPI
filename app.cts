@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const cors = require('cors');
+import { db } from "./db/connection.cjs";
 
 app.use(cors())
 
