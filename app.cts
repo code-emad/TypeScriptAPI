@@ -1,9 +1,12 @@
 const express = require('express')
 const app = express()
+const cors = require('cors');
 
+app.use(cors())
 
+app.use(express.json())
 // listen file
-//const app = require('./app')
+//const app = require('./app') will need to be included once moved to separate file
 const { PORT = 9090 } = process.env
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}...`));
