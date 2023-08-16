@@ -5,6 +5,19 @@ const cors = require('cors');
 app.use(cors())
 
 app.use(express.json())
+
+app.get('/api/names', (request, response, next) => {
+    () => {
+        const sqlString = 'SELECT * FROM names;'
+    return db.query(sqlString)
+    }
+})
+
+
+
+
+
+
 // listen file
 //const app = require('./app') will need to be included once moved to separate file
 const { PORT = 9090 } = process.env
