@@ -12,7 +12,7 @@ app.get('/api/names', (request, response, next) => {
         const sqlString = 'SELECT * FROM names;'
     return db.query(sqlString).then((names) => {
         console.log(names)
-        response.status(200).send()
+        response.status(200).send({"hello": "world"})
     })
     }
 })

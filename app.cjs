@@ -11,7 +11,7 @@ app.get('/api/names', function (request, response, next) {
         var sqlString = 'SELECT * FROM names;';
         return connection_cjs_1.db.query(sqlString).then(function (names) {
             console.log(names);
-            response.status(200).send();
+            response.status(200).send({ "hello": "world" });
         });
     });
 });
