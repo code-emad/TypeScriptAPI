@@ -22,3 +22,5 @@ function (request, response, next) {
 //const app = require('./app') will need to be included once moved to separate file
 var _a = process.env.PORT, PORT = _a === void 0 ? 9090 : _a;
 app.listen(PORT, function () { return console.log("Listening on port ".concat(PORT, "...")); });
+
+module.exports = app
